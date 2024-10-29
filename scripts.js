@@ -1,19 +1,10 @@
-document.addEventListener('DOMContentLoaded', function() {
-    // Your JavaScript code here
-
-    // Example: Smooth scrolling for anchor links
-    const links = document.querySelectorAll('a[href^="#"]');
-    for (const link of links) {
-        link.addEventListener('click', function(event) {
-            event.preventDefault();
-            const targetId = this.getAttribute('href').substring(1);
-            const targetElement = document.getElementById(targetId);
-            if (targetElement) {
-                window.scrollTo({
-                    top: targetElement.offsetTop,
-                    behavior: 'smooth'
-                });
-            }
-        });
-    }
+// Manejo de la notificación de cookies
+document.getElementById('acceptCookies').addEventListener('click', function() {
+    const notice = document.getElementById('cookieNotice');
+    notice.style.display = 'none';
 });
+
+setTimeout(() => {
+    const notice = document.getElementById('cookieNotice');
+    notice.style.display = 'none';
+}, 5000); // Desaparece después de 5 segundos

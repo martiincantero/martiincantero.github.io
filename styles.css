@@ -1,78 +1,153 @@
-/* General Styles */
-body {
-    font-family: Arial, sans-serif;
+* {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
-    color: #333;
 }
 
-/* Header Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+}
+
 header {
-    background: #333;
-    color: #fff;
-    padding: 1rem 0;
+    position: relative;
+}
+
+.banner {
+    background-image: url('banner-background.jpg'); /* Cambia por tu imagen */
+    background-size: cover;
+    color: white;
     text-align: center;
+    padding: 100px 20px;
 }
 
-header h1 {
-    margin: 0;
-    font-size: 2.5rem;
+.banner-content {
+    position: relative;
+    z-index: 2;
 }
 
-/* Navigation Styles */
-nav {
-    background: #444;
-    padding: 0.5rem 0;
+.banner h1 {
+    font-size: 3rem;
+}
+
+.logo {
+    width: 100px; /* Ajusta según tu logo */
 }
 
 nav ul {
     list-style: none;
     padding: 0;
-    margin: 0;
-    display: flex;
-    justify-content: center;
 }
 
 nav ul li {
-    margin: 0 1rem;
+    display: inline;
+    margin: 0 15px;
 }
 
-nav ul li a {
-    color: #fff;
+nav a {
+    color: white;
     text-decoration: none;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
+    transition: color 0.3s;
 }
 
-nav ul li a:hover {
-    text-decoration: underline;
+nav a:hover {
+    color: #ffcc00; /* Cambia por el color deseado */
 }
 
-/* Main Content Styles */
-main {
-    padding: 2rem;
-}
-
-main h2 {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-}
-
-main p {
-    line-height: 1.6;
-}
-
-/* Footer Styles */
-footer {
-    background: #333;
-    color: #fff;
-    text-align: center;
-    padding: 1rem 0;
+.cookie-notice {
     position: fixed;
-    width: 100%;
     bottom: 0;
+    left: 0;
+    right: 0;
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
 }
 
-footer p {
-    margin: 0;
+.card {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 600px;
+    text-align: center;
+}
+
+.social-icons {
+    margin-top: 10px;
+}
+
+.social-icon {
+    margin: 0 10px;
+    transition: color 0.3s;
+}
+
+.social-icon:hover {
+    color: #ffcc00; /* Cambia por el color deseado */
+}
+
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.project {
+    background: #f4f4f4;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    width: calc(33% - 20px);
+    margin: 10px;
+    padding: 15px;
+    text-align: center;
+    transition: transform 0.2s;
+}
+
+.project:hover {
+    transform: scale(1.05);
+}
+
+.progress-bar {
+    background: #e0e0e0;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.progress {
+    background: #76c7c0;
+    height: 20px;
+    color: white;
+    text-align: center;
+}
+
+#contact-form {
+    display: flex;
+    flex-direction: column;
+}
+
+#contact-form label {
+    margin-top: 10px;
+}
+
+#contact-form input, 
+#contact-form textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#contact-form button {
+    margin-top: 10px;
+    background: #76c7c0;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+#contact-form button:hover {
+    background: #65b4a7; /* Cambia por el color deseado */
 }
