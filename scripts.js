@@ -1,10 +1,26 @@
-// Manejo de la notificación de cookies
-document.getElementById('acceptCookies').addEventListener('click', function() {
-    const notice = document.getElementById('cookieNotice');
-    notice.style.display = 'none';
+document.addEventListener('DOMContentLoaded', function() {
+    const cookieConsent = document.getElementById('cookie-consent');
+    const acceptCookiesButton = document.getElementById('accept-cookies');
+
+    acceptCookiesButton.addEventListener('click', function() {
+        cookieConsent.style.display = 'none';
+    });
+
+    setTimeout(function() {
+        cookieConsent.style.display = 'none';
+    }, 5000);
 });
 
-setTimeout(() => {
-    const notice = document.getElementById('cookieNotice');
-    notice.style.display = 'none';
-}, 5000); // Desaparece después de 5 segundos
+document.addEventListener('DOMContentLoaded', function() {
+    const form = document.getElementById('contact-form');
+
+    form.addEventListener('submit', function(event) {
+        event.preventDefault(); // Evita el envío real del formulario
+
+        // Simula el envío del formulario
+        alert('Formulario enviado correctamente');
+
+        // Limpia los campos del formulario
+        form.reset();
+    });
+});
