@@ -3,138 +3,184 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Portafolio</title>
-    <style>
-        body, html {
-            margin: 0;
-            padding: 0;
-            font-family: Arial, sans-serif;
-        }
-        header {
-            background-image: url('ruta/a/tu/imagen-de-fondo.jpg');
-            background-size: cover;
-            background-position: center;
-            height: 100vh;
-            color: white;
-            text-align: center;
-            position: relative;
-        }
-        header .overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: rgba(0, 0, 0, 0.5);
-        }
-        header h1 {
-            position: relative;
-            top: 50%;
-            transform: translateY(-50%);
-            margin: 0;
-            font-size: 3em;
-        }
-        header img.logo {
-            position: absolute;
-            top: 20px;
-            left: 20px;
-            width: 100px;
-        }
-        nav {
-            position: absolute;
-            bottom: 20px;
-            width: 100%;
-            text-align: center;
-        }
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin: 0 15px;
-            font-size: 1.2em;
-        }
-        .cookie-consent {
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            background: rgba(0, 0, 0, 0.8);
-            color: white;
-            text-align: center;
-            padding: 10px;
-            z-index: 1000;
-        }
-        .cookie-consent button {
-            background: #f1c40f;
-            border: none;
-            padding: 10px 20px;
-            cursor: pointer;
-            font-size: 1em;
-        }
-        .card {
-            border-radius: 15px;
-            background: #f9f9f9;
-            padding: 20px;
-            margin: 20px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-        .social-icons a {
-            margin: 0 10px;
-            text-decoration: none;
-            color: #333;
-            font-size: 1.5em;
-        }
-        .social-icons a:hover {
-            color: #0073e6;
-        }
-    </style>
+    <title>Mi Portafolio Profesional</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
+    <!-- Header -->
     <header>
-        <div class="overlay"></div>
-        <img src="ruta/a/tu/logo.png" alt="Logo" class="logo">
-        <h1>Tu Nombre</h1>
+        <div class="banner">
+            <img src="imagenes/logo.png" alt="Logo" class="logo">
+            <h1>Martín Cantero</h1>
+        </div>
         <nav>
-            <a href="#seccion1">Sección 1</a>
-            <a href="#seccion2">Sección 2</a>
-            <a href="#seccion3">Sección 3</a>
-            <a href="#sobre-mi">Sobre Mí</a>
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#sobre-mi">Acerca</a></li>
+                <li><a href="#habilidades">Skills</a></li>
+                <li><a href="#proyectos">Proyectos</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
         </nav>
     </header>
-    <section id="seccion1">
-        <h2>Sección 1</h2>
-        <p>Contenido de la sección 1.</p>
+
+    <!-- Cookie Consent -->
+    <div id="cookie-consent" class="cookie-consent">
+        <p>Este sitio utiliza cookies para mejorar la experiencia del usuario. <button id="accept-cookies">Aceptar</button></p>
+    </div>
+
+    <!-- Sección de Inicio -->
+    <section id="inicio">
+        <!-- Contenido de la página de inicio -->
     </section>
-    <section id="seccion2">
-        <h2>Sección 2</h2>
-        <p>Contenido de la sección 2.</p>
-    </section>
-    <section id="seccion3">
-        <h2>Sección 3</h2>
-        <p>Contenido de la sección 3.</p>
-    </section>
+
+    <!-- Sección Sobre Mí -->
     <section id="sobre-mi">
-        <h2>Sobre Mí</h2>
         <div class="card">
-            <p>Hola, soy [Tu Nombre], un desarrollador web con experiencia en [tu campo de estudio]. He trabajado en [nombre de empresas o proyectos] y tengo una pasión por crear soluciones innovadoras y eficientes.</p>
+            <h2>Sobre Mí</h2>
+            <p>Soy un apasionado de la informática de 18 años, con el Grado en Sistemas Microinformáticos y Redes, y actualmente cursando el Grado Superior en Administración de Sistemas Informáticos en Red (ASIR). Paralelamente, me estoy especializando de forma autodidacta en Ciberseguridad. Poseo la certificación de Pentester Junior (40 horas de formación en Enseñanzas Profesionales Sorolla), y actualmente me preparo para obtener la certificación eJPTv2 en Pentesting.</p>
             <div class="social-icons">
-                <a href="#" target="_blank"><i class="fab fa-facebook"></i></a>
-                <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
-                <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
-                <a href="#" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com" target="_blank" class="social-icon linkedin"><i class="fab fa-linkedin"></i></a>
+                <a href="https://www.github.com" target="_blank" class="social-icon github"><i class="fab fa-github"></i></a>
+                <a href="https://www.twitter.com" target="_blank" class="social-icon twitter"><i class="fab fa-twitter"></i></a>
             </div>
         </div>
     </section>
-    <div class="cookie-consent" id="cookieConsent">
-        Este sitio utiliza cookies para mejorar la experiencia del usuario.
-        <button onclick="hideCookieConsent()">Aceptar</button>
-    </div>
-    <script>
-        function hideCookieConsent() {
-            document.getElementById('cookieConsent').style.display = 'none';
-        }
-        setTimeout(hideCookieConsent, 5000);
-    </script>
-    <!-- Añadir el enlace a Font Awesome para los íconos de redes sociales -->
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+    <!-- Sección Habilidades y Conocimientos -->
+    <section id="habilidades">
+        <h2>Habilidades y Conocimientos</h2>
+        <div class="skill">
+            <h3>Ciberseguridad</h3>
+            <div class="progress-bar">
+                <div class="progress" style="width: 65%;">65%</div>
+            </div>
+            <div class="skill-description">
+                Especialización en técnicas de protección y análisis de vulnerabilidades en sistemas informáticos.
+            </div>
+        </div>
+        <div class="skill">
+            <h3>Administración de Sistemas</h3>
+            <div class="progress-bar">
+                <div class="progress" style="width: 80%;">80%</div>
+            </div>
+            <div class="skill-description">
+                Gestión y mantenimiento de sistemas operativos y servidores, asegurando su correcto funcionamiento.
+            </div>
+        </div>
+        <div class="skill">
+            <h3>Desarrollo Web</h3>
+            <div class="progress-bar">
+                <div class="progress" style="width: 60%;">60%</div>
+            </div>
+            <div class="skill-description">
+                Creación y diseño de sitios web utilizando tecnologías modernas como HTML, CSS y JavaScript.
+            </div>
+        </div>
+        <div class="skill">
+            <h3>Gestión de Bases de Datos</h3>
+            <div class="progress-bar">
+                <div class="progress" style="width: 65%;">65%</div>
+            </div>
+            <div class="skill-description">
+                Administración y optimización de bases de datos relacionales y no relacionales.
+            </div>
+        </div>
+    </section>
+      <!-- Sección Proyectos -->
+    <section id="proyectos" class="articles">
+        <article>
+            <div class="article-wrapper">
+                <figure>
+                    <img src="imagenes/proyecto1.png" alt="Proyecto 1" />
+                </figure>
+                <div class="article-body">
+                    <h2>Infames Legacy</h2>
+                    <p>
+                        Servidor de GTA V Roleplay utilizando HeidiSQL, HTML, CSS, JS y LUA
+                    </p>
+                    <a href="#" class="read-more">
+                        Leer más <span class="sr-only">sobre Proyecto 1</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </article>
+        <article>
+            <div class="article-wrapper">
+                <figure>
+                    <img src="imagenes/proyecto2.png" alt="Proyecto 2" />
+                </figure>
+                <div class="article-body">
+                    <h2>HoodStar CM</h2>
+                    <p>
+                        Servidor de GTA V Roleplay utilizando HeidiSQL, HTML, CSS, JS y LUA
+                    </p>
+                    <a href="#" class="read-more">
+                        Leer más <span class="sr-only">sobre Proyecto 2</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </article>
+        <article>
+            <div class="article-wrapper">
+                <figure>
+                    <img src="https://picsum.photos/id/103/800/450" alt="Proyecto 3" />
+                </figure>
+                <div class="article-body">
+                    <h2>Proyecto 3</h2>
+                    <p>
+                        Descripción breve del Proyecto 3. Este proyecto trata sobre...
+                    </p>
+                    <a href="#" class="read-more">
+                        Leer más <span class="sr-only">sobre Proyecto 3</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </article>
+        <!-- Añade más artículos según sea necesario -->
+    </section>
+
+    <!-- Sección de Contacto -->
+    <section id="contacto">
+        <div class="form">
+            <div class="title">¿Quieres contratarme? ¡Hablemos!</div>
+            <form id="contact-form" onsubmit="handleSubmit(event)">
+                <div class="input-container ic1">
+                    <input id="nombre" class="input" type="text" placeholder=" " required />
+                    <div class="cut"></div>
+                    <label for="nombre" class="placeholder">Nombre</label>
+                </div>
+                <div class="input-container ic2">
+                    <input id="email" class="input" type="email" placeholder=" " required />
+                    <div class="cut cut-short"></div>
+                    <label for="email" class="placeholder">Correo electrónico</label>
+                </div>
+                <div class="input-container ic2">
+                    <textarea id="mensaje" class="input" placeholder=" " required></textarea>
+                    <div class="cut"></div>
+                    <label for="mensaje" class="placeholder">Mensaje</label>
+                </div>
+                <button type="submit" class="submit">Enviar</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Pie de Página -->
+    <footer>
+        <p>© 2024 Martín Cantero</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="scripts.js"></script>
 </body>
 </html>
